@@ -6,4 +6,5 @@
 // \brief primary module interface unit GameBasics
 
 export module GameBasics;
-export import :Move;
+export import GameBasicsConcepts;
+export import GameBasicsGame;

@@ -8,7 +8,6 @@
 import GameBasics;
 
 int main() {
-  Move<int> move; 
 
   return 0;
 }

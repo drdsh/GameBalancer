@@ -9,13 +9,11 @@
 #Get project directory
 ROOT:=$(realpath $(dir $(firstword $(MAKEFILE_LIST))))
 
-CXX      := clang++
-CXXFLAGS := -std=c++20 -march=native -O3 -fmodules -Xclang -emit-module-interface
-ifeq ($(DESTDIR),)
-DESTDIR := $(ROOT)/build
-endif
-
-.phony: all install
+.phony: all clean
 
 all:
 	make -C src all
+
+clean:
+	rm -rf bin
+	make -C src clean
